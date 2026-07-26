@@ -220,12 +220,19 @@
           <p>För samarbeten, frågor eller feedback kan du kontakta mig på e-post.</p>
         </div>
 
-        <div class="contact-card">
-          <p class="contact-label">E-post</p>
-          <a class="contact-email" href="mailto:yousef_aria@yahoo.se">yousef_aria@yahoo.se</a>
-          <p class="contact-note">Jag läser inkommande meddelanden via den här adressen.</p>
-          <a class="button button-primary" href="mailto:yousef_aria@yahoo.se">Skicka e-post</a>
-        </div>
+        <form class="contact-card contact-form" action="mailto:yousef_aria@yahoo.se" method="post" enctype="text/plain">
+          <label for="contact-name">Namn</label>
+          <input id="contact-name" name="name" type="text" placeholder="Ditt namn" autocomplete="name" required>
+
+          <label for="contact-email">E-postadress</label>
+          <input id="contact-email" name="email" type="email" placeholder="namn@exempel.se" autocomplete="email" required>
+
+          <label for="contact-message">Kommentar</label>
+          <textarea id="contact-message" name="message" rows="6" placeholder="Skriv ditt meddelande här" required></textarea>
+
+          <button class="button button-primary button-large" type="submit">Skicka till mig</button>
+          <p class="contact-note">När du skickar öppnas ditt e-postprogram och meddelandet går till yousef_aria@yahoo.se.</p>
+        </form>
       </div>
     </section>
 
