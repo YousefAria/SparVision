@@ -187,6 +187,12 @@ svg { width: 1.15em; fill: currentColor; }
 .contact-note, .form-hint { margin: 0; color: var(--muted); font-size: 14px; }
 .form-hint { margin-top: 2px; }
 .contact-card .button { width: 100%; margin-top: 8px; }
+.honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.field-error { margin: -2px 0 0; color: #b42318; font-size: 13px; min-height: 1.2em; }
+.form-status { margin: 4px 0 0; font-size: 14px; font-weight: 700; }
+.form-status[data-state="success"] { color: #176d31; }
+.form-status[data-state="error"] { color: #b42318; }
+.form-status[data-state="pending"] { color: var(--green-deep); }
 
 :focus-visible { outline: 3px solid var(--green-bright); outline-offset: 4px; }
 .reveal { opacity: 1; transform: none; }

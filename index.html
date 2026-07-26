@@ -220,18 +220,27 @@
           <p>För samarbeten, frågor eller feedback kan du kontakta mig på e-post.</p>
         </div>
 
-        <form class="contact-card contact-form" action="mailto:yousef_aria@yahoo.se" method="post" enctype="text/plain">
+        <form class="contact-card contact-form" data-contact-form method="post" action="/api/contact" novalidate>
+          <div class="honeypot" aria-hidden="true">
+            <label for="contact-website">Website</label>
+            <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
           <label for="contact-name">Namn</label>
-          <input id="contact-name" name="name" type="text" placeholder="Ditt namn" autocomplete="name" required>
+          <input id="contact-name" name="name" type="text" placeholder="Ditt namn" autocomplete="name" required aria-describedby="contact-name-error">
+          <p class="field-error" id="contact-name-error" data-error-for="name" hidden></p>
 
           <label for="contact-email">E-postadress</label>
-          <input id="contact-email" name="email" type="email" placeholder="namn@exempel.se" autocomplete="email" required>
+          <input id="contact-email" name="email" type="email" placeholder="namn@exempel.se" autocomplete="email" required aria-describedby="contact-email-error">
+          <p class="field-error" id="contact-email-error" data-error-for="email" hidden></p>
 
           <label for="contact-message">Kommentar</label>
-          <textarea id="contact-message" name="message" rows="6" placeholder="Skriv ditt meddelande här" required></textarea>
+          <textarea id="contact-message" name="message" rows="6" placeholder="Skriv ditt meddelande här" required aria-describedby="contact-message-error"></textarea>
+          <p class="field-error" id="contact-message-error" data-error-for="message" hidden></p>
 
-          <button class="button button-primary button-large" type="submit">Skicka till mig</button>
-          <p class="contact-note">När du skickar öppnas ditt e-postprogram och meddelandet går till yousef_aria@yahoo.se.</p>
+          <button class="button button-primary button-large" type="submit" data-contact-submit>Skicka till mig</button>
+          <p class="contact-note">När du skickar går meddelandet till yousef_aria@yahoo.se.</p>
+          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>

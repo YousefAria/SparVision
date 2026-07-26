@@ -22,3 +22,18 @@ npx --yes serve .
 Production website: [https://sparvision.vercel.app](https://sparvision.vercel.app)
 
 The `main` branch is connected to Vercel. Every push to GitHub automatically creates a production deployment with HTTPS.
+
+## Contact form backend
+
+The homepage contact form posts to `/api/contact`, which sends mail through Resend.
+
+Required environment variables on Vercel:
+
+- `RESEND_API_KEY` — your Resend API key
+- `RESEND_FROM_EMAIL` — a verified sender address from Resend, for example `SparVision <onboarding@resend.dev>` while testing
+- `CONTACT_TO_EMAIL` — the inbox that should receive the form submissions (use `yousef_aria@yahoo.se`)
+
+Optional spam / form controls:
+
+- `CONTACT_TO_EMAIL` is optional in code because it defaults to `yousef_aria@yahoo.se`, but setting it explicitly is recommended.
+- The form already includes a hidden honeypot field and server-side validation.
