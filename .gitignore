@@ -1,0 +1,12 @@
+# Local backups and temporary verification files
+*.backup-*
+verify-*
+
+# Hosting CLI state
+.vercel/
+.netlify/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
