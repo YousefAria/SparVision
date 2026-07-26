@@ -176,6 +176,18 @@ svg { width: 1.15em; fill: currentColor; }
 .footer-links a:hover { color: var(--green-bright); }
 .footer-bottom { display: flex; justify-content: space-between; margin-top: 55px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.12); font-size: 11px; letter-spacing: .07em; text-transform: uppercase; }
 
+.subscribe-section, .contact-section { background: #f5f3ea; }
+.subscribe-grid, .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
+.contact-card { padding: 34px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); box-shadow: 0 20px 50px rgba(7,24,44,.06); }
+.subscribe-card { display: grid; gap: 12px; }
+.contact-card label, .contact-label { color: var(--green-deep); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.contact-card input, .contact-card textarea { width: 100%; padding: 15px 16px; border: 1px solid rgba(7,24,44,.18); border-radius: 16px; background: #fff; color: var(--ink); font: inherit; }
+.contact-card input:focus, .contact-card textarea:focus { outline: 3px solid rgba(167,236,115,.65); outline-offset: 2px; border-color: var(--green); }
+.contact-email { display: inline-block; margin: 8px 0 12px; color: var(--navy); font-size: clamp(20px, 2.2vw, 30px); font-weight: 800; word-break: break-word; }
+.contact-note, .form-hint { margin: 0; color: var(--muted); font-size: 14px; }
+.form-hint { margin-top: 2px; }
+.contact-card .button { width: 100%; margin-top: 8px; }
+
 :focus-visible { outline: 3px solid var(--green-bright); outline-offset: 4px; }
 .reveal { opacity: 1; transform: none; }
 .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
@@ -197,6 +209,7 @@ svg { width: 1.15em; fill: currentColor; }
   .instagram-grid { grid-template-columns: 1fr; }
   .instagram-copy { max-width: 680px; }
   .source-grid { grid-template-columns: 1fr; gap: 55px; }
+  .subscribe-grid, .contact-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1.2fr; }
   .footer-links { grid-column: 1 / -1; display: flex; justify-items: start; gap: 25px; }
 }
