@@ -19,4 +19,6 @@ npx --yes serve .
 
 ## Publishing
 
-This is a static website and can be published directly with GitHub Pages, Netlify, Cloudflare Pages, or any standard web host.
+Production website: [https://sparvision.vercel.app](https://sparvision.vercel.app)
+
+The `main` branch is connected to Vercel. Every push to GitHub automatically creates a production deployment with HTTPS.
